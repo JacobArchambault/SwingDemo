@@ -48,20 +48,10 @@ public class SwingDemo extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == RBs[0]) {
-			topPanel.remove(hiddenLabel);
-			topPanel.setBorder(emptyBdr);
-			topPanel.revalidate();
-			topPanel.repaint();
-			topPanel.add(topLabel);
-			topPanel.add(topField);
+			showTopLabel();
 		}
 		if (e.getSource() == RBs[1]) {
-			topPanel.remove(topLabel);
-			topPanel.remove(topField);
-			topPanel.add(hiddenLabel);
-			topPanel.setBorder(compoundBorder);
-			topPanel.revalidate();
-			topPanel.repaint();
+			showHiddenLabel();
 		}
 		String arg = e.getActionCommand();
 		if (arg == "Clear") {
@@ -72,6 +62,24 @@ public class SwingDemo extends JFrame implements ActionListener {
 			System.exit(0);
 		}
 
+	}
+
+	private void showHiddenLabel() {
+		topPanel.remove(topLabel);
+		topPanel.remove(topField);
+		topPanel.add(hiddenLabel);
+		topPanel.setBorder(compoundBorder);
+		topPanel.revalidate();
+		topPanel.repaint();
+	}
+
+	private void showTopLabel() {
+		topPanel.remove(hiddenLabel);
+		topPanel.setBorder(emptyBdr);
+		topPanel.revalidate();
+		topPanel.repaint();
+		topPanel.add(topLabel);
+		topPanel.add(topField);
 	}
 
 	public void addPanelComponents() {
