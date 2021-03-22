@@ -63,7 +63,6 @@ public class SwingDemo extends JFrame implements ActionListener {
 			System.exit(
 					0);
 		}
-
 	}
 
 	private void clearText() {
@@ -146,6 +145,27 @@ public class SwingDemo extends JFrame implements ActionListener {
 
 	public void createPanels() {
 		// construct the different panels
+		createTopPanel();
+		createCenterPanel();
+		bottomPanel = new JPanel();
+		JPanel hiddenPanel = new JPanel(
+				new GridLayout(
+						1,
+						2));
+	}
+
+	private void createCenterPanel() {
+		centerPanel = new JPanel();
+		centerPanel.setLayout(
+				new GridLayout(
+						1,
+						2));
+		for (int i = 0; i < RBs.length; i++)
+			centerPanel.add(
+					RBs[i]);
+	}
+
+	private void createTopPanel() {
 		topPanel = new JPanel();
 		topPanel.setBorder(
 				emptyBdr);
@@ -157,19 +177,6 @@ public class SwingDemo extends JFrame implements ActionListener {
 				topLabel);
 		topPanel.add(
 				topField);
-		centerPanel = new JPanel();
-		centerPanel.setLayout(
-				new GridLayout(
-						1,
-						2));
-		for (int i = 0; i < RBs.length; i++)
-			centerPanel.add(
-					RBs[i]);
-		bottomPanel = new JPanel();
-		JPanel hiddenPanel = new JPanel(
-				new GridLayout(
-						1,
-						2));
 	}
 
 	public void createRadioButtons() {
