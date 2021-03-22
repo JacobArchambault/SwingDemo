@@ -1,4 +1,4 @@
-package com.jacobarchambault.ch17lab1;
+package com.jacobarchambault.swingdemo;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
