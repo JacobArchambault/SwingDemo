@@ -20,7 +20,7 @@ import javax.swing.border.Border;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.LineBorder;
 
-public class Ch17Lab1 extends JFrame implements ActionListener {
+public class SwingDemo extends JFrame implements ActionListener {
 	/**
 	 * 
 	 */
@@ -36,7 +36,7 @@ public class Ch17Lab1 extends JFrame implements ActionListener {
 
 	JPanel topPanel, centerPanel, bottomPanel, hiddenPanel;
 
-	public Ch17Lab1() {
+	public SwingDemo() {
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		createLabels();
 		createTextField();
