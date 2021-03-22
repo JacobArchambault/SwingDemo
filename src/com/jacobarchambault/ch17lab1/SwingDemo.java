@@ -91,14 +91,18 @@ public class SwingDemo extends JFrame implements ActionListener {
 			centerPanel.add(RBs[i]);
 			RBs[i].addActionListener(this);
 		}
+		addButtonsToBottomPanel();
+		add(topPanel, BorderLayout.NORTH);
+		add(centerPanel, BorderLayout.CENTER);
+		add(bottomPanel, BorderLayout.SOUTH);
+	}
+
+	private void addButtonsToBottomPanel() {
 		// add the buttons to the bottom panel
 		for (int i = 0; i < buttons.length; i++) {
 			bottomPanel.add(buttons[i]);
 			buttons[i].addActionListener(this);
 		}
-		add(topPanel, BorderLayout.NORTH);
-		add(centerPanel, BorderLayout.CENTER);
-		add(bottomPanel, BorderLayout.SOUTH);
 	}
 
 	public void createButtons() {
