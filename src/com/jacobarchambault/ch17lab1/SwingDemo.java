@@ -30,7 +30,6 @@ public class SwingDemo extends JFrame implements ActionListener {
 			20,
 			20,
 			20);
-	ButtonGroup RBGroup;
 	JRadioButton[] RBs;
 	JTextField topField;
 	JLabel topLabel, hiddenLabel;
@@ -179,7 +178,7 @@ public class SwingDemo extends JFrame implements ActionListener {
 
 	public void createRadioButtons() {
 		// construct the radio buttons and Button Group
-		RBGroup = new ButtonGroup();
+		ButtonGroup RBGroup = new ButtonGroup();
 		RBs = new JRadioButton[2];
 		RBs[0] = new JRadioButton(
 				"Show Labels/Fields",
