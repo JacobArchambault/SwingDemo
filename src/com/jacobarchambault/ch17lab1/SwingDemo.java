@@ -27,8 +27,7 @@ public class SwingDemo extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	JButton buttons[];
 	Border emptyBdr = BorderFactory.createEmptyBorder(20, 20, 20, 20);
-	Border lineBorder = LineBorder.createBlackLineBorder();
-	Border compoundBorder = new CompoundBorder(lineBorder, emptyBdr);
+	Border compoundBorder = new CompoundBorder(LineBorder.createBlackLineBorder(), emptyBdr);
 	ButtonGroup RBGroup;
 	JRadioButton[] RBs;
 	JTextField topField;
