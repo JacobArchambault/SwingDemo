@@ -31,7 +31,7 @@ public class SwingDemo extends JFrame implements ActionListener {
 	ButtonGroup RBGroup;
 	JRadioButton[] RBs;
 	JTextField topField;
-	JLabel topLabel, bottomLabel, hiddenLabel;
+	JLabel topLabel, hiddenLabel;
 
 	JPanel topPanel, centerPanel, bottomPanel, hiddenPanel;
 
