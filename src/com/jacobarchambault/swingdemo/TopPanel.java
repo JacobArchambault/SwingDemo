@@ -1,8 +1,11 @@
 package com.jacobarchambault.swingdemo;
 
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
+import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.Border;
@@ -12,15 +15,26 @@ import javax.swing.border.LineBorder;
 public class TopPanel extends JPanel {
 	TopField topField = new TopField();
 
+	JButton clearButton = new JButton("Clear");
 	Border emptyBdr = BorderFactory.createEmptyBorder(20, 20, 20, 20);
 	TopLabel topLabel = new TopLabel("Testing Label ", SwingConstants.RIGHT);
 	HiddenLabel hiddenLabel = new HiddenLabel("Now something different displays", SwingConstants.CENTER);
 
 	TopPanel() {
 		setBorder(emptyBdr);
-		setLayout(new GridLayout(1, 2));
+		setLayout(new GridLayout(1, 3));
 		add(topLabel);
 		add(topField);
+		add(clearButton);
+		clearButton.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				topField.clearText();
+				
+			}
+			
+		});
 	};
 
 	/**
@@ -31,6 +45,7 @@ public class TopPanel extends JPanel {
 	void showHiddenLabel() {
 		remove(topLabel);
 		remove(topField);
+		remove(clearButton);
 		add(hiddenLabel);
 		setBorder(new CompoundBorder(LineBorder.createBlackLineBorder(), emptyBdr));
 		revalidate();
@@ -44,6 +59,7 @@ public class TopPanel extends JPanel {
 		repaint();
 		add(topLabel);
 		add(topField);
+		add(clearButton);
 	}
 
 	void clearText() {
