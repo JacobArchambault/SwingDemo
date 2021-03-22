@@ -36,10 +36,12 @@ public class SwingDemo extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == rBs[0]) {
-			topPanel.showTopLabel();
+			topPanel.setVisible(true);
+//			topPanel.showTopLabel();
 		}
 		if (e.getSource() == rBs[1]) {
-			topPanel.showHiddenLabel();
+			topPanel.setVisible(false);
+//			topPanel.showHiddenLabel();
 		}
 	}
 
