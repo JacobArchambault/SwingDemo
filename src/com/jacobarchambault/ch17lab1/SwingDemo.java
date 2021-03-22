@@ -101,12 +101,7 @@ public class SwingDemo extends JFrame implements ActionListener {
 	}
 
 	public void addPanelComponents() {
-		for (int i = 0; i < RBs.length; i++) {
-			centerPanel.add(
-					RBs[i]);
-			RBs[i].addActionListener(
-					this);
-		}
+		addRadioButtonsToCenterPanel();
 		addButtonsToBottomPanel();
 		add(
 				topPanel,
@@ -117,6 +112,15 @@ public class SwingDemo extends JFrame implements ActionListener {
 		add(
 				bottomPanel,
 				BorderLayout.SOUTH);
+	}
+
+	private void addRadioButtonsToCenterPanel() {
+		for (int i = 0; i < RBs.length; i++) {
+			centerPanel.add(
+					RBs[i]);
+			RBs[i].addActionListener(
+					this);
+		}
 	}
 
 	private void addButtonsToBottomPanel() {
