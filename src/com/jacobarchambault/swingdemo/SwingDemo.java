@@ -20,28 +20,26 @@ public class SwingDemo extends JFrame implements ActionListener {
 	JRadioButton[] rBs;
 	TopPanel topPanel = new TopPanel();
 	JPanel centerPanel;
-	BottomPanel bottomPanel;
 
 	public SwingDemo() {
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		createRadioButtons();
 		createPanels();
 		addRadioButtonsToCenterPanel();
-		bottomPanel = new BottomPanel();
 		add(topPanel, BorderLayout.NORTH);
 		add(centerPanel, BorderLayout.CENTER);
-		add(bottomPanel, BorderLayout.SOUTH);
+		add(new BottomPanel(), BorderLayout.SOUTH);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == rBs[0]) {
-			topPanel.setVisible(true);
-//			topPanel.showTopLabel();
+//			topPanel.setVisible(true);
+			topPanel.showTopLabel();
 		}
 		if (e.getSource() == rBs[1]) {
-			topPanel.setVisible(false);
-//			topPanel.showHiddenLabel();
+//			topPanel.setVisible(false);
+			topPanel.showHiddenLabel();
 		}
 	}
 
@@ -61,8 +59,6 @@ public class SwingDemo extends JFrame implements ActionListener {
 	private void createCenterPanel() {
 		centerPanel = new JPanel();
 		centerPanel.setLayout(new GridLayout(1, 2));
-		for (int i = 0; i < rBs.length; i++)
-			centerPanel.add(rBs[i]);
 	}
 
 	public void createRadioButtons() {
