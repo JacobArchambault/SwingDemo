@@ -182,13 +182,12 @@ public class SwingDemo extends JFrame implements ActionListener {
 	public void createRadioButtons() {
 		// construct the radio buttons and Button Group
 		ButtonGroup RBGroup = new ButtonGroup();
-		RBs = new JRadioButton[2];
-		RBs[0] = new JRadioButton(
+		RBs = new JRadioButton[] { new JRadioButton(
 				"Show Labels/Fields",
-				true);
-		RBs[1] = new JRadioButton(
-				"Hide Labels/Fields",
-				false);
+				true),
+				new JRadioButton(
+						"Hide Labels/Fields",
+						false) };
 		for (int i = 0; i < RBs.length; i++) {
 			RBGroup.add(
 					RBs[i]);
