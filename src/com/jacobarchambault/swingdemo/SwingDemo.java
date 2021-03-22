@@ -2,17 +2,13 @@ package com.jacobarchambault.swingdemo;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 import javax.swing.ButtonGroup;
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.WindowConstants;
 
-public class SwingDemo extends JFrame implements ActionListener {
+public class SwingDemo extends JFrame {
 	/**
 	 * 
 	 */
@@ -31,23 +27,12 @@ public class SwingDemo extends JFrame implements ActionListener {
 		add(new BottomPanel(), BorderLayout.SOUTH);
 	}
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		if (e.getSource() == rBs[0]) {
-//			topPanel.setVisible(true);
-			topPanel.showTopLabel();
-		}
-		if (e.getSource() == rBs[1]) {
-//			topPanel.setVisible(false);
-			topPanel.showHiddenLabel();
-		}
-	}
-
 	private void addRadioButtonsToCenterPanel() {
 		for (int i = 0; i < rBs.length; i++) {
 			centerPanel.add(rBs[i]);
-			rBs[i].addActionListener(this);
 		}
+		rBs[0].addActionListener(e -> topPanel.showTopLabel());
+		rBs[1].addActionListener(e -> topPanel.showHiddenLabel());
 	}
 
 
