@@ -36,7 +36,9 @@ public class SwingDemo extends JFrame implements ActionListener {
 	TopLabel topLabel = new TopLabel(
 			"Testing Label ",
 			SwingConstants.RIGHT);
-	JPanel topPanel, centerPanel, bottomPanel;
+	JPanel topPanel;
+	JPanel centerPanel; 
+	JPanel bottomPanel;
 
 	public SwingDemo() {
 		setDefaultCloseOperation(
