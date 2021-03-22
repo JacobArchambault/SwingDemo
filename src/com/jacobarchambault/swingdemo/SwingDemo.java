@@ -36,7 +36,7 @@ public class SwingDemo extends JFrame implements ActionListener {
 	TopLabel topLabel = new TopLabel(
 			"Testing Label ",
 			SwingConstants.RIGHT);
-	JPanel topPanel;
+	TopPanel topPanel;
 	JPanel centerPanel; 
 	JPanel bottomPanel;
 
@@ -148,7 +148,7 @@ public class SwingDemo extends JFrame implements ActionListener {
 	}
 
 	private void createTopPanel() {
-		topPanel = new JPanel();
+		topPanel = new TopPanel();
 		topPanel.setBorder(
 				emptyBdr);
 		topPanel.setLayout(
