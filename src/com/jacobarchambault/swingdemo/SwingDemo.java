@@ -9,7 +9,6 @@ import javax.swing.BorderFactory;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.SwingConstants;
@@ -34,7 +33,7 @@ public class SwingDemo extends JFrame implements ActionListener {
 	HiddenLabel hiddenLabel = new HiddenLabel(
 			"Now something different displays",
 			SwingConstants.CENTER);
-	JLabel topLabel = new JLabel(
+	TopLabel topLabel = new TopLabel(
 			"Testing Label ",
 			SwingConstants.RIGHT);
 	JPanel topPanel, centerPanel, bottomPanel;
@@ -45,7 +44,17 @@ public class SwingDemo extends JFrame implements ActionListener {
 		createTextField();
 		createRadioButtons();
 		createPanels();
-		addPanelComponents();
+		addRadioButtonsToCenterPanel();
+		addButtonsToBottomPanel();
+		add(
+				topPanel,
+				BorderLayout.NORTH);
+		add(
+				centerPanel,
+				BorderLayout.CENTER);
+		add(
+				bottomPanel,
+				BorderLayout.SOUTH);
 	}
 
 	@Override
@@ -95,20 +104,6 @@ public class SwingDemo extends JFrame implements ActionListener {
 				topField);
 	}
 
-	public void addPanelComponents() {
-		addRadioButtonsToCenterPanel();
-		addButtonsToBottomPanel();
-		add(
-				topPanel,
-				BorderLayout.NORTH);
-		add(
-				centerPanel,
-				BorderLayout.CENTER);
-		add(
-				bottomPanel,
-				BorderLayout.SOUTH);
-	}
-
 	private void addRadioButtonsToCenterPanel() {
 		for (int i = 0; i < RBs.length; i++) {
 			centerPanel.add(
@@ -131,6 +126,7 @@ public class SwingDemo extends JFrame implements ActionListener {
 					this);
 		}
 	}
+
 	public void createPanels() {
 		// construct the different panels
 		createTopPanel();
