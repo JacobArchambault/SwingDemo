@@ -11,34 +11,48 @@ public class SwingDemo extends JFrame {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	JRadioButton[] rBs;
+	JRadioButton[] rBs = new JRadioButton[] { new JRadioButton(
+			"Show Labels/Fields",
+			true),
+			new JRadioButton(
+					"Hide Labels/Fields",
+					false) };
 	TopPanel topPanel = new TopPanel();
 	CenterPanel centerPanel = new CenterPanel();
 
 	SwingDemo() {
-		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(
+				WindowConstants.EXIT_ON_CLOSE);
 		createRadioButtons();
 		addRadioButtonsToCenterPanel();
-		add(topPanel, BorderLayout.NORTH);
-		add(centerPanel, BorderLayout.CENTER);
-		add(new BottomPanel(), BorderLayout.SOUTH);
+		add(
+				topPanel,
+				BorderLayout.NORTH);
+		add(
+				centerPanel,
+				BorderLayout.CENTER);
+		add(
+				new BottomPanel(),
+				BorderLayout.SOUTH);
 	}
 
 	private void addRadioButtonsToCenterPanel() {
 		for (int i = 0; i < rBs.length; i++) {
-			centerPanel.add(rBs[i]);
+			centerPanel.add(
+					rBs[i]);
 		}
-		rBs[0].addActionListener(e -> topPanel.showTopLabel());
-		rBs[1].addActionListener(e -> topPanel.showHiddenLabel());
+		rBs[0].addActionListener(
+				e -> topPanel.showTopLabel());
+		rBs[1].addActionListener(
+				e -> topPanel.showHiddenLabel());
 	}
 
 	public void createRadioButtons() {
 		// construct the radio buttons and Button Group
 		ButtonGroup rBGroup = new ButtonGroup();
-		rBs = new JRadioButton[] { new JRadioButton("Show Labels/Fields", true),
-				new JRadioButton("Hide Labels/Fields", false) };
 		for (int i = 0; i < rBs.length; i++) {
-			rBGroup.add(rBs[i]);
+			rBGroup.add(
+					rBs[i]);
 		}
 	}
 }
