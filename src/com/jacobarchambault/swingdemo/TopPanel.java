@@ -26,15 +26,7 @@ public class TopPanel extends JPanel {
 		add(topLabel);
 		add(topField);
 		add(clearButton);
-		clearButton.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				topField.clearText();
-				
-			}
-			
-		});
+		clearButton.addActionListener(e -> topField.clearText());
 	}
 
 	/**
