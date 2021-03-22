@@ -1,20 +1,18 @@
 package com.jacobarchambault.swingdemo;
 
 import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.Border;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.LineBorder;
 
 public class TopPanel extends JPanel {
-	TopField topField = new TopField();
+	JTextField topField = new JTextField();
 
 	JButton clearButton = new JButton("Clear");
 	Border emptyBdr = BorderFactory.createEmptyBorder(20, 20, 20, 20);
@@ -27,7 +25,7 @@ public class TopPanel extends JPanel {
 		add(topLabel);
 		add(topField);
 		add(clearButton);
-		clearButton.addActionListener(e -> topField.clearText());
+		clearButton.addActionListener(e -> topField.setText(""));
 	}
 
 	/**
