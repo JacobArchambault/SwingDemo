@@ -37,9 +37,9 @@ public class SwingDemo extends JFrame {
 	}
 
 	private void addRadioButtonsToCenterPanel() {
-		for (int i = 0; i < rBs.length; i++) {
+		for (JRadioButton rB : rBs) {
 			centerPanel.add(
-					rBs[i]);
+					rB);
 		}
 		rBs[0].addActionListener(
 				e -> topPanel.showTopLabel());
@@ -50,9 +50,9 @@ public class SwingDemo extends JFrame {
 	public void createRadioButtons() {
 		// construct the radio buttons and Button Group
 		ButtonGroup rBGroup = new ButtonGroup();
-		for (int i = 0; i < rBs.length; i++) {
+		for (JRadioButton rB : rBs) {
 			rBGroup.add(
-					rBs[i]);
+					rB);
 		}
 	}
 }
