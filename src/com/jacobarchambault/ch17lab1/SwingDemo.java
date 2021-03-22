@@ -30,9 +30,6 @@ public class SwingDemo extends JFrame implements ActionListener {
 			20,
 			20,
 			20);
-	Border compoundBorder = new CompoundBorder(
-			LineBorder.createBlackLineBorder(),
-			emptyBdr);
 	ButtonGroup RBGroup;
 	JRadioButton[] RBs;
 	JTextField topField;
@@ -86,7 +83,9 @@ public class SwingDemo extends JFrame implements ActionListener {
 		topPanel.add(
 				hiddenLabel);
 		topPanel.setBorder(
-				compoundBorder);
+				new CompoundBorder(
+						LineBorder.createBlackLineBorder(),
+						emptyBdr));
 		topPanel.revalidate();
 		topPanel.repaint();
 	}
