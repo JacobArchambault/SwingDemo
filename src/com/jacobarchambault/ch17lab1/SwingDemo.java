@@ -33,7 +33,7 @@ public class SwingDemo extends JFrame implements ActionListener {
 	JTextField topField;
 	JLabel topLabel, hiddenLabel;
 
-	JPanel topPanel, centerPanel, bottomPanel, hiddenPanel;
+	JPanel topPanel, centerPanel, bottomPanel;
 
 	public SwingDemo() {
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -116,7 +116,7 @@ public class SwingDemo extends JFrame implements ActionListener {
 		bottomPanel = new JPanel();
 		for (int i = 0; i < buttons.length; i++)
 			bottomPanel.add(buttons[i]);
-		hiddenPanel = new JPanel(new GridLayout(1, 2));
+		JPanel hiddenPanel = new JPanel(new GridLayout(1, 2));
 	}
 
 	public void createRadioButtons() {
