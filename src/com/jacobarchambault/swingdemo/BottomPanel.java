@@ -4,6 +4,11 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 public class BottomPanel extends JPanel {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	BottomPanel() {
 		JButton exitButton = new JButton("Exit");
 		add(exitButton);

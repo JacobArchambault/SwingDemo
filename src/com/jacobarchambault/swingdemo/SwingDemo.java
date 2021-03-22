@@ -1,10 +1,8 @@
 package com.jacobarchambault.swingdemo;
 
 import java.awt.BorderLayout;
-import java.awt.GridLayout;
 import javax.swing.ButtonGroup;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.WindowConstants;
 
@@ -15,12 +13,11 @@ public class SwingDemo extends JFrame {
 	private static final long serialVersionUID = 1L;
 	JRadioButton[] rBs;
 	TopPanel topPanel = new TopPanel();
-	JPanel centerPanel;
+	CenterPanel centerPanel = new CenterPanel();
 
-	public SwingDemo() {
+	SwingDemo() {
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		createRadioButtons();
-		createCenterPanel();
 		addRadioButtonsToCenterPanel();
 		add(topPanel, BorderLayout.NORTH);
 		add(centerPanel, BorderLayout.CENTER);
@@ -33,12 +30,6 @@ public class SwingDemo extends JFrame {
 		}
 		rBs[0].addActionListener(e -> topPanel.showTopLabel());
 		rBs[1].addActionListener(e -> topPanel.showHiddenLabel());
-	}
-
-
-	private void createCenterPanel() {
-		centerPanel = new JPanel();
-		centerPanel.setLayout(new GridLayout(1, 2));
 	}
 
 	public void createRadioButtons() {
