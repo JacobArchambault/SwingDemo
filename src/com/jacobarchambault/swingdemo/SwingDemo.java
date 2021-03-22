@@ -1,7 +1,6 @@
 package com.jacobarchambault.swingdemo;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -31,14 +30,18 @@ public class SwingDemo extends JFrame implements ActionListener {
 			20);
 	JRadioButton[] RBs;
 	TopField topField;
-	JLabel topLabel, hiddenLabel;
-
+	// construct the labels
+	JLabel hiddenLabel = new JLabel(
+			"Now something different displays",
+			SwingConstants.CENTER);
+	JLabel topLabel = new JLabel(
+			"Testing Label ",
+			SwingConstants.RIGHT);
 	JPanel topPanel, centerPanel, bottomPanel;
 
 	public SwingDemo() {
 		setDefaultCloseOperation(
 				WindowConstants.EXIT_ON_CLOSE);
-		createLabels();
 		createTextField();
 		createRadioButtons();
 		createPanels();
@@ -63,7 +66,6 @@ public class SwingDemo extends JFrame implements ActionListener {
 					0);
 		}
 	}
-
 
 	private void showHiddenLabel() {
 		topPanel.remove(
@@ -129,17 +131,6 @@ public class SwingDemo extends JFrame implements ActionListener {
 					this);
 		}
 	}
-
-	public void createLabels() {
-		// construct the labels
-		hiddenLabel = new JLabel(
-				"Now something different displays",
-				SwingConstants.CENTER);
-		topLabel = new JLabel(
-				"Testing Label ",
-				SwingConstants.RIGHT);
-	}
-
 	public void createPanels() {
 		// construct the different panels
 		createTopPanel();
