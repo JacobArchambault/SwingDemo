@@ -56,7 +56,7 @@ public class SwingDemo extends JFrame implements ActionListener {
 		}
 		String arg = e.getActionCommand();
 		if (arg == "Clear") {
-			clearText();
+			topField.clearText();
 		}
 		if (arg == "Exit") {
 			System.exit(
@@ -64,12 +64,6 @@ public class SwingDemo extends JFrame implements ActionListener {
 		}
 	}
 
-	private void clearText() {
-		topField.setText(
-				"");
-		topField.setBackground(
-				Color.white);
-	}
 
 	private void showHiddenLabel() {
 		topPanel.remove(
