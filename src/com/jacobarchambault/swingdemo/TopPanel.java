@@ -53,8 +53,4 @@ public class TopPanel extends JPanel {
 		add(topField);
 		add(clearButton);
 	}
-
-	void clearText() {
-		topField.clearText();
-	}
 }

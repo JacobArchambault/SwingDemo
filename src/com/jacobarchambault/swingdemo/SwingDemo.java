@@ -50,9 +50,6 @@ public class SwingDemo extends JFrame implements ActionListener {
 			topPanel.showHiddenLabel();
 		}
 		String arg = e.getActionCommand();
-		if (arg.equals("Clear") ) {
-			topPanel.clearText();
-		}
 		if (arg.equals("Exit")) {
 			System.exit(
 					0);
