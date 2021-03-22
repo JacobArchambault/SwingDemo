@@ -25,7 +25,7 @@ public class SwingDemo extends JFrame implements ActionListener {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	JButton buttons[];
+	JButton buttons[] = new JButton[] {new JButton("Clear"), new JButton("Exit")};
 	Border emptyBdr = BorderFactory.createEmptyBorder(20, 20, 20, 20);
 	Border compoundBorder = new CompoundBorder(LineBorder.createBlackLineBorder(), emptyBdr);
 	ButtonGroup RBGroup;
@@ -55,13 +55,17 @@ public class SwingDemo extends JFrame implements ActionListener {
 		}
 		String arg = e.getActionCommand();
 		if (arg == "Clear") {
-			topField.setText("");
-			topField.setBackground(Color.white);
+			clearText();
 		}
 		if (arg == "Exit") {
 			System.exit(0);
 		}
 
+	}
+
+	private void clearText() {
+		topField.setText("");
+		topField.setBackground(Color.white);
 	}
 
 	private void showHiddenLabel() {
@@ -98,10 +102,6 @@ public class SwingDemo extends JFrame implements ActionListener {
 	}
 
 	public void createButtons() {
-		// construct the buttons
-		buttons = new JButton[2];
-		buttons[0] = new JButton("Clear");
-		buttons[1] = new JButton("Exit");
 	}
 
 	public void createLabels() {
