@@ -22,28 +22,14 @@ public class SwingDemo extends JFrame implements ActionListener {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	Border emptyBdr = BorderFactory.createEmptyBorder(
-			20,
-			20,
-			20,
-			20);
 	JRadioButton[] rBs;
-	TopField topField;
-	// construct the labels
-	HiddenLabel hiddenLabel = new HiddenLabel(
-			"Now something different displays",
-			SwingConstants.CENTER);
-	TopLabel topLabel = new TopLabel(
-			"Testing Label ",
-			SwingConstants.RIGHT);
-	TopPanel topPanel;
+	TopPanel topPanel = new TopPanel();
 	JPanel centerPanel; 
 	JPanel bottomPanel;
 
 	public SwingDemo() {
 		setDefaultCloseOperation(
 				WindowConstants.EXIT_ON_CLOSE);
-		createTextField();
 		createRadioButtons();
 		createPanels();
 		addRadioButtonsToCenterPanel();
@@ -63,14 +49,14 @@ public class SwingDemo extends JFrame implements ActionListener {
 	public void actionPerformed(
 			ActionEvent e) {
 		if (e.getSource() == rBs[0]) {
-			showTopLabel();
+			topPanel.showTopLabel();
 		}
 		if (e.getSource() == rBs[1]) {
-			showHiddenLabel();
+			topPanel.showHiddenLabel();
 		}
 		String arg = e.getActionCommand();
 		if (arg.equals("Clear") ) {
-			topField.clearText();
+			topPanel.clearText();
 		}
 		if (arg.equals("Exit")) {
 			System.exit(
@@ -78,33 +64,7 @@ public class SwingDemo extends JFrame implements ActionListener {
 		}
 	}
 
-	private void showHiddenLabel() {
-		topPanel.remove(
-				topLabel);
-		topPanel.remove(
-				topField);
-		topPanel.add(
-				hiddenLabel);
-		topPanel.setBorder(
-				new CompoundBorder(
-						LineBorder.createBlackLineBorder(),
-						emptyBdr));
-		topPanel.revalidate();
-		topPanel.repaint();
-	}
 
-	private void showTopLabel() {
-		topPanel.remove(
-				hiddenLabel);
-		topPanel.setBorder(
-				emptyBdr);
-		topPanel.revalidate();
-		topPanel.repaint();
-		topPanel.add(
-				topLabel);
-		topPanel.add(
-				topField);
-	}
 
 	private void addRadioButtonsToCenterPanel() {
 		for (int i = 0; i < rBs.length; i++) {
@@ -131,7 +91,6 @@ public class SwingDemo extends JFrame implements ActionListener {
 
 	public void createPanels() {
 		// construct the different panels
-		createTopPanel();
 		createCenterPanel();
 		bottomPanel = new JPanel();
 	}
@@ -147,19 +106,6 @@ public class SwingDemo extends JFrame implements ActionListener {
 					rBs[i]);
 	}
 
-	private void createTopPanel() {
-		topPanel = new TopPanel();
-		topPanel.setBorder(
-				emptyBdr);
-		topPanel.setLayout(
-				new GridLayout(
-						1,
-						2));
-		topPanel.add(
-				topLabel);
-		topPanel.add(
-				topField);
-	}
 
 	public void createRadioButtons() {
 		// construct the radio buttons and Button Group
@@ -174,10 +120,5 @@ public class SwingDemo extends JFrame implements ActionListener {
 			rBGroup.add(
 					rBs[i]);
 		}
-	}
-
-	public void createTextField() {
-		// construct the text field
-		topField = new TopField();
 	}
 }
