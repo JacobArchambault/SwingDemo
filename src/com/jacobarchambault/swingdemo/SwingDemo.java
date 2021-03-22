@@ -27,7 +27,7 @@ public class SwingDemo extends JFrame implements ActionListener {
 		createRadioButtons();
 		createPanels();
 		addRadioButtonsToCenterPanel();
-		addButtonsToBottomPanel();
+		addExitButtonToBottomPanel();
 		add(topPanel, BorderLayout.NORTH);
 		add(centerPanel, BorderLayout.CENTER);
 		add(bottomPanel, BorderLayout.SOUTH);
@@ -50,7 +50,7 @@ public class SwingDemo extends JFrame implements ActionListener {
 		}
 	}
 
-	private void addButtonsToBottomPanel() {
+	private void addExitButtonToBottomPanel() {
 		JButton exitButton = new JButton("Exit");
 		bottomPanel.add(exitButton);
 		exitButton.addActionListener(e -> System.exit(0));
