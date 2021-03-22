@@ -148,10 +148,6 @@ public class SwingDemo extends JFrame implements ActionListener {
 		createTopPanel();
 		createCenterPanel();
 		bottomPanel = new JPanel();
-		JPanel hiddenPanel = new JPanel(
-				new GridLayout(
-						1,
-						2));
 	}
 
 	private void createCenterPanel() {
