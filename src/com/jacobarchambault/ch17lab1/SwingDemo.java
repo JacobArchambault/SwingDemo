@@ -122,8 +122,6 @@ public class SwingDemo extends JFrame implements ActionListener {
 		for (int i = 0; i < RBs.length; i++)
 			centerPanel.add(RBs[i]);
 		bottomPanel = new JPanel();
-		for (int i = 0; i < buttons.length; i++)
-			bottomPanel.add(buttons[i]);
 		JPanel hiddenPanel = new JPanel(new GridLayout(1, 2));
 	}
 
