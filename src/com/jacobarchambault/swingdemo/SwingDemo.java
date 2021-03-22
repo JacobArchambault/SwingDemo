@@ -69,10 +69,10 @@ public class SwingDemo extends JFrame implements ActionListener {
 			showHiddenLabel();
 		}
 		String arg = e.getActionCommand();
-		if (arg == "Clear") {
+		if (arg.equals("Clear") ) {
 			topField.clearText();
 		}
-		if (arg == "Exit") {
+		if (arg.equals("Exit")) {
 			System.exit(
 					0);
 		}
