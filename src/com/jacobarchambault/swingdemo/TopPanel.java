@@ -35,7 +35,7 @@ public class TopPanel extends JPanel {
 			}
 			
 		});
-	};
+	}
 
 	/**
 	 * 

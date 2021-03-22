@@ -71,8 +71,7 @@ public class SwingDemo extends JFrame implements ActionListener {
 	}
 
 	private void addButtonsToBottomPanel() {
-		JButton[] buttons = new JButton[] { new JButton(
-				"Clear"),
+		JButton[] buttons = new JButton[] { 
 				new JButton(
 						"Exit") };
 		// add the buttons to the bottom panel
