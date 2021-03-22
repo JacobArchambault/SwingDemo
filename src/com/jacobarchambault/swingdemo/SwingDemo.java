@@ -27,7 +27,7 @@ public class SwingDemo extends JFrame implements ActionListener {
 			20,
 			20,
 			20);
-	JRadioButton[] RBs;
+	JRadioButton[] rBs;
 	TopField topField;
 	// construct the labels
 	HiddenLabel hiddenLabel = new HiddenLabel(
@@ -62,10 +62,10 @@ public class SwingDemo extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(
 			ActionEvent e) {
-		if (e.getSource() == RBs[0]) {
+		if (e.getSource() == rBs[0]) {
 			showTopLabel();
 		}
-		if (e.getSource() == RBs[1]) {
+		if (e.getSource() == rBs[1]) {
 			showHiddenLabel();
 		}
 		String arg = e.getActionCommand();
@@ -107,10 +107,10 @@ public class SwingDemo extends JFrame implements ActionListener {
 	}
 
 	private void addRadioButtonsToCenterPanel() {
-		for (int i = 0; i < RBs.length; i++) {
+		for (int i = 0; i < rBs.length; i++) {
 			centerPanel.add(
-					RBs[i]);
-			RBs[i].addActionListener(
+					rBs[i]);
+			rBs[i].addActionListener(
 					this);
 		}
 	}
@@ -142,9 +142,9 @@ public class SwingDemo extends JFrame implements ActionListener {
 				new GridLayout(
 						1,
 						2));
-		for (int i = 0; i < RBs.length; i++)
+		for (int i = 0; i < rBs.length; i++)
 			centerPanel.add(
-					RBs[i]);
+					rBs[i]);
 	}
 
 	private void createTopPanel() {
@@ -163,16 +163,16 @@ public class SwingDemo extends JFrame implements ActionListener {
 
 	public void createRadioButtons() {
 		// construct the radio buttons and Button Group
-		ButtonGroup RBGroup = new ButtonGroup();
-		RBs = new JRadioButton[] { new JRadioButton(
+		ButtonGroup rBGroup = new ButtonGroup();
+		rBs = new JRadioButton[] { new JRadioButton(
 				"Show Labels/Fields",
 				true),
 				new JRadioButton(
 						"Hide Labels/Fields",
 						false) };
-		for (int i = 0; i < RBs.length; i++) {
-			RBGroup.add(
-					RBs[i]);
+		for (int i = 0; i < rBs.length; i++) {
+			rBGroup.add(
+					rBs[i]);
 		}
 	}
 
