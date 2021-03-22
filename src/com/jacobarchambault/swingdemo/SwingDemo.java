@@ -24,7 +24,7 @@ public class SwingDemo extends JFrame implements ActionListener {
 	public SwingDemo() {
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		createRadioButtons();
-		createPanels();
+		createCenterPanel();
 		addRadioButtonsToCenterPanel();
 		add(topPanel, BorderLayout.NORTH);
 		add(centerPanel, BorderLayout.CENTER);
@@ -50,11 +50,6 @@ public class SwingDemo extends JFrame implements ActionListener {
 		}
 	}
 
-
-	public void createPanels() {
-		// construct the different panels
-		createCenterPanel();
-	}
 
 	private void createCenterPanel() {
 		centerPanel = new JPanel();
