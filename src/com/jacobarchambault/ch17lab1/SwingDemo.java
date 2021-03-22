@@ -41,7 +41,6 @@ public class SwingDemo extends JFrame implements ActionListener {
 				WindowConstants.EXIT_ON_CLOSE);
 		createLabels();
 		createTextField();
-		createButtons();
 		createRadioButtons();
 		createPanels();
 		addPanelComponents();
@@ -133,9 +132,6 @@ public class SwingDemo extends JFrame implements ActionListener {
 			buttons[i].addActionListener(
 					this);
 		}
-	}
-
-	public void createButtons() {
 	}
 
 	public void createLabels() {
