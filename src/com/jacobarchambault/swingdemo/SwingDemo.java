@@ -31,7 +31,7 @@ public class SwingDemo extends JFrame implements ActionListener {
 	JRadioButton[] RBs;
 	TopField topField;
 	// construct the labels
-	JLabel hiddenLabel = new JLabel(
+	HiddenLabel hiddenLabel = new HiddenLabel(
 			"Now something different displays",
 			SwingConstants.CENTER);
 	JLabel topLabel = new JLabel(
