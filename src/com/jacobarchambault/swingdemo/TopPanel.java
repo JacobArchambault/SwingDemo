@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.Border;
@@ -17,8 +18,8 @@ public class TopPanel extends JPanel {
 
 	JButton clearButton = new JButton("Clear");
 	Border emptyBdr = BorderFactory.createEmptyBorder(20, 20, 20, 20);
-	TopLabel topLabel = new TopLabel("Testing Label ", SwingConstants.RIGHT);
-	HiddenLabel hiddenLabel = new HiddenLabel("Now something different displays", SwingConstants.CENTER);
+	JLabel topLabel = new JLabel("Testing Label ", SwingConstants.RIGHT);
+	JLabel hiddenLabel = new JLabel("Now something different displays", SwingConstants.CENTER);
 
 	TopPanel() {
 		setBorder(emptyBdr);
