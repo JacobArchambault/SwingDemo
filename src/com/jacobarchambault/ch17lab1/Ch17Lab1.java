@@ -25,14 +25,6 @@ public class Ch17Lab1 extends JFrame implements ActionListener {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	public static void main(String[] args) {
-		JFrame.setDefaultLookAndFeelDecorated(true);
-		Ch17Lab1 frameInfo = new Ch17Lab1();
-		frameInfo.setSize(350, 250);
-		frameInfo.setVisible(true);
-		frameInfo.setTitle("Chapter 17 Lab 1");
-
-	}
 	JButton buttons[];
 	Border emptyBdr = BorderFactory.createEmptyBorder(20, 20, 20, 20);
 	Border lineBorder = LineBorder.createBlackLineBorder();
