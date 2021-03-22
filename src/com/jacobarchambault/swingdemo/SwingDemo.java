@@ -13,7 +13,6 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
-import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
 import javax.swing.border.Border;
@@ -31,7 +30,7 @@ public class SwingDemo extends JFrame implements ActionListener {
 			20,
 			20);
 	JRadioButton[] RBs;
-	JTextField topField;
+	TopField topField;
 	JLabel topLabel, hiddenLabel;
 
 	JPanel topPanel, centerPanel, bottomPanel;
@@ -196,6 +195,6 @@ public class SwingDemo extends JFrame implements ActionListener {
 
 	public void createTextField() {
 		// construct the text field
-		topField = new JTextField();
+		topField = new TopField();
 	}
 }
