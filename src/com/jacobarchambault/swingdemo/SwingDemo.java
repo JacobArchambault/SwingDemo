@@ -1,9 +1,11 @@
 package com.jacobarchambault.swingdemo;
 
 import java.awt.BorderLayout;
+import java.awt.CardLayout;
 
 import javax.swing.ButtonGroup;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.WindowConstants;
 
@@ -20,14 +22,17 @@ public class SwingDemo extends JFrame {
 					"Hide Labels/Fields",
 					false) };
 	TopPanel topPanel = new TopPanel();
+	HiddenPanel hiddenPanel = new HiddenPanel();
+	JPanel cards = new JPanel(new CardLayout());
 
+	
 	SwingDemo() {
 		setDefaultCloseOperation(
 				WindowConstants.EXIT_ON_CLOSE);
+		cards.add(topPanel);
+		cards.add(hiddenPanel); 
+		add(cards, BorderLayout.NORTH);
 		addRadioButtonsToCenterPanel();
-		add(
-				topPanel,
-				BorderLayout.NORTH);
 		add(
 				centerPanel,
 				BorderLayout.CENTER);
@@ -45,8 +50,8 @@ public class SwingDemo extends JFrame {
 					rB);
 		}
 		rBs[0].addActionListener(
-				e -> topPanel.showTopLabel());
+				e -> {topPanel.setVisible(true); hiddenPanel.setVisible(false);});
 		rBs[1].addActionListener(
-				e -> topPanel.showHiddenLabel());
+				e -> {hiddenPanel.setVisible(true); topPanel.setVisible(false);});
 	}
 }

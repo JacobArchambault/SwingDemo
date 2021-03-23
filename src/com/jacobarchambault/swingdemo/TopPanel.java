@@ -20,23 +20,18 @@ public class TopPanel extends JPanel {
 
 	JButton clearButton = new JButton(
 			"Clear");
-	Border emptyBdr = BorderFactory.createEmptyBorder(
-			20,
-			20,
-			20,
-			20);
-	JLabel hiddenLabel = new JLabel(
-			"Now something different displays",
-			SwingConstants.CENTER);
 	JTextField topField = new JTextField();
-
 	JLabel topLabel = new JLabel(
 			"Testing Label ",
 			SwingConstants.RIGHT);
 
 	TopPanel() {
 		setBorder(
-				emptyBdr);
+				BorderFactory.createEmptyBorder(
+						20,
+						20,
+						20,
+						20));
 		setLayout(
 				new GridLayout(
 						1,
@@ -50,37 +45,5 @@ public class TopPanel extends JPanel {
 		clearButton.addActionListener(
 				e -> topField.setText(
 						""));
-	}
-
-	void showHiddenLabel() {
-		remove(
-				topLabel);
-		remove(
-				topField);
-		remove(
-				clearButton);
-		add(
-				hiddenLabel);
-		setBorder(
-				new CompoundBorder(
-						LineBorder.createBlackLineBorder(),
-						emptyBdr));
-		revalidate();
-		repaint();
-	}
-
-	void showTopLabel() {
-		remove(
-				hiddenLabel);
-		setBorder(
-				emptyBdr);
-		revalidate();
-		repaint();
-		add(
-				topLabel);
-		add(
-				topField);
-		add(
-				clearButton);
 	}
 }
