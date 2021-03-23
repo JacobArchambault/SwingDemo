@@ -14,7 +14,7 @@ public class Program {
 		frameInfo.setVisible(
 				true);
 		frameInfo.setTitle(
-				"Chapter 17 Lab 1");
+				"Swing Demo");
 	}
 
 }
