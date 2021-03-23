@@ -38,6 +38,11 @@ class SwingDemo extends JFrame {
 		add(
 				new BottomPanel(),
 				BorderLayout.SOUTH);
+		setSize(
+				350,
+				250);
+		setVisible(
+				true);
 	}
 
 	private void addRadioButtonsToCenterPanel() {
