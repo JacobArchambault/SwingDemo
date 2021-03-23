@@ -23,15 +23,19 @@ public class SwingDemo extends JFrame {
 					false) };
 	TopPanel topPanel = new TopPanel();
 	HiddenPanel hiddenPanel = new HiddenPanel();
-	JPanel cards = new JPanel(new CardLayout());
+	CardLayout cardLayout = new CardLayout();
+	JPanel cards = new JPanel(cardLayout);
 
-	
 	SwingDemo() {
 		setDefaultCloseOperation(
 				WindowConstants.EXIT_ON_CLOSE);
-		cards.add(topPanel);
-		cards.add(hiddenPanel); 
-		add(cards, BorderLayout.NORTH);
+		cards.add(
+				topPanel);
+		cards.add(
+				hiddenPanel);
+		add(
+				cards,
+				BorderLayout.NORTH);
 		addRadioButtonsToCenterPanel();
 		add(
 				centerPanel,
@@ -50,8 +54,12 @@ public class SwingDemo extends JFrame {
 					rB);
 		}
 		rBs[0].addActionListener(
-				e -> {topPanel.setVisible(true); hiddenPanel.setVisible(false);});
+				e -> {
+					cardLayout.first(cards);
+				});
 		rBs[1].addActionListener(
-				e -> {hiddenPanel.setVisible(true); topPanel.setVisible(false);});
+				e -> {
+					cardLayout.last(cards);
+				});
 	}
 }
