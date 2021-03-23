@@ -3,7 +3,7 @@ package com.jacobarchambault.swingdemo;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-public class BottomPanel extends JPanel {
+class BottomPanel extends JPanel {
 	/**
 	 *
 	 */

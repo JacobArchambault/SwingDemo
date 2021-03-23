@@ -7,7 +7,7 @@ import javax.swing.SwingConstants;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.LineBorder;
 
-public class HiddenPanel extends JPanel {
+class HiddenPanel extends JPanel {
 	/**
 	 *
 	 */

@@ -4,11 +4,8 @@ import java.awt.CardLayout;
 
 import javax.swing.JPanel;
 
-public class CardPanel extends JPanel {
+class CardPanel extends JPanel {
 
-	/**
-	 *
-	 */
 	private static final long serialVersionUID = 1L;
 
 	CardPanel(

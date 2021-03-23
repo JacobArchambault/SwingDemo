@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 import javax.swing.JRadioButton;
 import javax.swing.WindowConstants;
 
-public class SwingDemo extends JFrame {
+class SwingDemo extends JFrame {
 	/**
 	 *
 	 */
