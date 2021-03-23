@@ -24,9 +24,11 @@ class SwingDemo extends JFrame {
 					"Hide Labels/Fields",
 					false) };
 
-	SwingDemo(String title) {
-		super(title);
-		setDefaultLookAndFeelDecorated(
+	SwingDemo(
+			final String title) {
+		super(
+				title);
+		JFrame.setDefaultLookAndFeelDecorated(
 				true);
 		setDefaultCloseOperation(
 				WindowConstants.EXIT_ON_CLOSE);
