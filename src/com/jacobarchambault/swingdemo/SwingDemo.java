@@ -26,6 +26,8 @@ class SwingDemo extends JFrame {
 
 	SwingDemo(String title) {
 		super(title);
+		setDefaultLookAndFeelDecorated(
+				true);
 		setDefaultCloseOperation(
 				WindowConstants.EXIT_ON_CLOSE);
 		add(
