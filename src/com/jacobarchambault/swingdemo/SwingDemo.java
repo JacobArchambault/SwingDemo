@@ -23,7 +23,6 @@ public class SwingDemo extends JFrame {
 	SwingDemo() {
 		setDefaultCloseOperation(
 				WindowConstants.EXIT_ON_CLOSE);
-		createRadioButtons();
 		addRadioButtonsToCenterPanel();
 		add(
 				topPanel,
@@ -37,7 +36,10 @@ public class SwingDemo extends JFrame {
 	}
 
 	private void addRadioButtonsToCenterPanel() {
+		ButtonGroup rBGroup = new ButtonGroup();
 		for (JRadioButton rB : rBs) {
+			rBGroup.add(
+					rB);
 			centerPanel.add(
 					rB);
 		}
@@ -45,14 +47,5 @@ public class SwingDemo extends JFrame {
 				e -> topPanel.showTopLabel());
 		rBs[1].addActionListener(
 				e -> topPanel.showHiddenLabel());
-	}
-
-	public void createRadioButtons() {
-		// construct the radio buttons and Button Group
-		ButtonGroup rBGroup = new ButtonGroup();
-		for (JRadioButton rB : rBs) {
-			rBGroup.add(
-					rB);
-		}
 	}
 }
