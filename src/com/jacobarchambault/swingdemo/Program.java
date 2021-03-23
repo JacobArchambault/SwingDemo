@@ -7,14 +7,12 @@ public class Program {
 			final String[] args) {
 		JFrame.setDefaultLookAndFeelDecorated(
 				true);
-		final var frameInfo = new SwingDemo();
+		final var frameInfo = new SwingDemo("Swing Demo");
 		frameInfo.setSize(
 				350,
 				250);
 		frameInfo.setVisible(
 				true);
-		frameInfo.setTitle(
-				"Swing Demo");
 	}
 
 }

@@ -24,7 +24,8 @@ class SwingDemo extends JFrame {
 					"Hide Labels/Fields",
 					false) };
 
-	SwingDemo() {
+	SwingDemo(String title) {
+		super(title);
 		setDefaultCloseOperation(
 				WindowConstants.EXIT_ON_CLOSE);
 		add(
