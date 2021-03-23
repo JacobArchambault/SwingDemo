@@ -5,7 +5,6 @@ import java.awt.CardLayout;
 
 import javax.swing.ButtonGroup;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.WindowConstants;
 
@@ -14,6 +13,9 @@ public class SwingDemo extends JFrame {
 	 *
 	 */
 	private static final long serialVersionUID = 1L;
+	CardLayout cardLayout = new CardLayout();
+	CardPanel cards = new CardPanel(
+			cardLayout);
 	CenterPanel centerPanel = new CenterPanel();
 	JRadioButton[] rBs = new JRadioButton[] { new JRadioButton(
 			"Show Labels/Fields",
@@ -21,18 +23,10 @@ public class SwingDemo extends JFrame {
 			new JRadioButton(
 					"Hide Labels/Fields",
 					false) };
-	TopPanel topPanel = new TopPanel();
-	HiddenPanel hiddenPanel = new HiddenPanel();
-	CardLayout cardLayout = new CardLayout();
-	JPanel cards = new JPanel(cardLayout);
 
 	SwingDemo() {
 		setDefaultCloseOperation(
 				WindowConstants.EXIT_ON_CLOSE);
-		cards.add(
-				topPanel);
-		cards.add(
-				hiddenPanel);
 		add(
 				cards,
 				BorderLayout.NORTH);
@@ -55,11 +49,13 @@ public class SwingDemo extends JFrame {
 		}
 		rBs[0].addActionListener(
 				e -> {
-					cardLayout.first(cards);
+					cardLayout.first(
+							cards);
 				});
 		rBs[1].addActionListener(
 				e -> {
-					cardLayout.last(cards);
+					cardLayout.last(
+							cards);
 				});
 	}
 }

@@ -8,6 +8,10 @@ import javax.swing.border.CompoundBorder;
 import javax.swing.border.LineBorder;
 
 public class HiddenPanel extends JPanel {
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 1L;
 	JLabel hiddenLabel = new JLabel(
 			"Now something different displays",
 			SwingConstants.CENTER);
