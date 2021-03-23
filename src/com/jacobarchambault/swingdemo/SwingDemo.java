@@ -1,6 +1,7 @@
 package com.jacobarchambault.swingdemo;
 
 import java.awt.BorderLayout;
+
 import javax.swing.ButtonGroup;
 import javax.swing.JFrame;
 import javax.swing.JRadioButton;
@@ -8,9 +9,10 @@ import javax.swing.WindowConstants;
 
 public class SwingDemo extends JFrame {
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
+	CenterPanel centerPanel = new CenterPanel();
 	JRadioButton[] rBs = new JRadioButton[] { new JRadioButton(
 			"Show Labels/Fields",
 			true),
@@ -18,7 +20,6 @@ public class SwingDemo extends JFrame {
 					"Hide Labels/Fields",
 					false) };
 	TopPanel topPanel = new TopPanel();
-	CenterPanel centerPanel = new CenterPanel();
 
 	SwingDemo() {
 		setDefaultCloseOperation(
@@ -36,8 +37,8 @@ public class SwingDemo extends JFrame {
 	}
 
 	private void addRadioButtonsToCenterPanel() {
-		ButtonGroup rBGroup = new ButtonGroup();
-		for (JRadioButton rB : rBs) {
+		final var rBGroup = new ButtonGroup();
+		for (final JRadioButton rB : rBs) {
 			rBGroup.add(
 					rB);
 			centerPanel.add(

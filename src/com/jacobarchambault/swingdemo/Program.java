@@ -4,10 +4,10 @@ import javax.swing.JFrame;
 
 public class Program {
 	public static void main(
-			String[] args) {
+			final String[] args) {
 		JFrame.setDefaultLookAndFeelDecorated(
 				true);
-		SwingDemo frameInfo = new SwingDemo();
+		final var frameInfo = new SwingDemo();
 		frameInfo.setSize(
 				350,
 				250);
